@@ -1,0 +1,214 @@
+
+
+
+/* <--------------------------------------- Imports  ---------------------------------------> */
+
+/* ==================== Font =================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* <---------------------------------------  CSS  ---------------------------------------> */
+
+/* ==================== Base CSS =================== */
+
+
+:root {
+    /* ======== Body Colors ======= */
+
+    --body--main--color: #fff;
+
+    /* ======== Navbar Colors =======  */
+
+    --navbar--bg--color: #5e5d5d;
+
+    /* ======== Html Tag Colors =======  */
+
+    --font--primary--color: #1ECB15;
+    --font--secondary--color: #179510;
+
+    --font--white--color: #fff;
+    --font--gray--color: rgba(255, 255, 255, .75);
+    --font--black--color: #121212;
+
+    --bg--first--color: #404040;
+    --bg--second--color: #121212;
+    --bg--third--color: #0F0F0F;
+
+
+    /* ======== button Colors =======  */
+
+    --button--primary--bg--color: #1ECB15;
+    --button--secondary--bg--color: #179510;
+    --button--font--color: #fff;
+
+    /* ======== Font Weight =======  */
+
+    --weight--normal: 400;
+    --weight--semibold: 500;
+    --weight--bold: 600;
+    --weight--bolder: 700;
+
+    /* ======== Font Size =======  */
+
+    --largest--font-size: 5rem;
+    --large--font-size: 4rem;
+    --small--font-size:2rem;
+    --smallest--font-size: 1.6rem;
+    --middle--font-size: 2.5rem;
+
+    /* ======== Extra Size =======  */
+
+    --primary--size: 3.2rem;
+
+     /* ======== Z-Index =======  */
+     
+    --normal--z-index:1;
+    --second--normal--z-index:99;
+
+    --largest--z-index:999;
+    --smallest--z-index:9;
+
+    --negative--z-index: -99;
+
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;   /*  Default Font size 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;    /* Roboto Family */
+    font-style: var(--weight--normal);
+    background-color: var(--body--main--color);
+    color: var(--font--black--color);
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--navbar--bg--color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--font--primary--color);
+    border-radius: 5px;
+}
+
+
+
+/* ==================== Car Rental Logo =================== */
+
+.logo img {
+    height: 38px;
+}
+
+/* ==================== NavBar =================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--navbar--bg--color);
+    padding: 2rem 6rem 0 6rem;
+}
+
+.nav__items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+}
+
+.nav__link {
+    z-index: var(--second--normal--z-index);
+    font-weight: var(--weight--semibold);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 60px;
+}
+
+.active{
+    color: var(--font--primary--color);
+    transition: all 0.5s ease-in-out;
+}
+
+.account__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    column-gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.account__box{
+    margin-top: -1rem;
+    height: 55px ;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    background-color: var(--font--primary--color);
+    border-radius: 100px;
+    padding: 1rem;
+    cursor: pointer;
+    margin-left: -2rem;
+    margin-bottom: 0.5rem;
+}
+
+.account__box img{
+    border-radius: 50%;
+    background-color:#fff;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+.account__box p{
+    color: var(--font--white--color);
+    font-weight: var(--weight--semibold);
+    text-transform: capitalize;
+}
+
+
+.account__box img{
+    border-radius: 50%;
+    background-color:#fff;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+.account__box p{
+    color: var(--font--white--color);
+    font-weight: var(--weight--semibold);
+}
+
+
+
+
+/* ==================== NAVBAR ANIMATION =================== */
+
+.hidden-up{
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateY(0%);
+}
